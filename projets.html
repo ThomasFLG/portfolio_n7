@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    max-width: 900px;
+    margin: 20px auto;
+  }
+
+  @media (max-width: 700px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 450px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .card {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  }
+</style>
+</head>
+
+<body>
+<header>
+    <h1>FONT LE GUELLEC Thomas</h1>
+    <p>Etudiant à l'ENSEEIHT</p>
+    <p>Apprenti ingénieur chez Airbus Defence and Space</p>
+
+  <nav>
+    <ul>
+        <li><a href="index.html">Presentation</a></li>
+        <li><a href="experiences.html">Expériences</a></li>
+        <li><a href="formations.html">Formations</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<h1>Mes Projets</h1>
+
+<div class="grid">
+  <a class="card" href="projets/projet1.html">Projet 1</a>
+  <a class="card" href="projets/projet1.html">Projet 2</a>
+  <a class="card" href="projets/projet1.html">Projet 3</a>
+  <a class="card" href="projets/projet1.html">Projet 4</a>
+  <a class="card" href="projets/projet1.html">Projet 5</a>
+  <a class="card" href="projets/projet1.html">Projet 6</a>
+</div>
+</main>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<script>
+const CORRECT_PASSWORD = "TeacherN7!";
+
+function unlock() {
+    const pwd = document.getElementById("password").value;
+    const error = document.getElementById("error");
+    const video = document.getElementById("video-container");
+    const loginBox = document.getElementById("login-box");
+
+    if (pwd === CORRECT_PASSWORD) {
+        video.style.display = "block";
+        loginBox.style.display = "none"; 
+    } else {
+        error.style.display = "block";
+    }
+}
+</script>
+
+
+<body>
+  <header>
+    <h1>FONT LE GUELLEC Thomas</h1>
+    <p>Etudiant à l'ENSEEIHT</p>
+    <p>Apprenti ingénieur chez Airbus Defence and Space</p>
+
+  <nav>
+    <ul>
+        <li><a href="index.html">Presentation</a></li>
+        <li><a href="experiences.html">Expériences</a></li>
+        <li><a href="formations.html">Formations</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  </header>
+
+  <main>
+
+  <section id="presentation">
+  <h2>Présentation</h2>
+
+  <div class="cv-links">
+    <a href="docs/CV_FR.pdf" download class="btn">📄 Télécharger mon CV (FR)</a>
+    <a href="docs/CV_EN.pdf" download class="btn">📄 Download my CV (EN)</a>
+  </div>
+
+     <!-- Zone protégée -->
+  <div id="login-box">
+    <p>🔒 Connectez-vous pour voir la vidéo de présentation.</p>
+
+    <input type="password" id="password" placeholder="Mot de passe">
+    <button onclick="unlock()">Entrer</button>
+
+    <p id="error" style="color:red; display:none;">Mot de passe incorrect.</p>
+  </div>
+
+  <!-- La vidéo masquée -->
+  <div class="video-container" id="video-container" style="display:none;">
+    <iframe 
+      src="https://www.youtube.com/embed/TON_ID_VIDEO" 
+      title="Vidéo de présentation"
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+    </iframe> 
+  </div>
+  </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email personnel : <a href="mailto:thomas.font2@etu.inp-n7.fr"></a>thomas.fontlg@gmail.com</p>
+      <p>Email scolaire : <a href="mailto:thomas.font2@etu.inp-n7.fr">thomas.font2@etu.inp-n7.fr</a></p>
+      <p>LinkedIn : <a href="www.linkedin.com/in/thomasfontleguellec/">thomasfontleguellec</a></p>
+      <p>GitHub : <a href="https://github.com/ThomasFLG">ThomasFLG</a></p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Hébergé sur GitHub Pages</p>
+    <p>© 2025 Thomas Font Le Guellec - Tous droits réservés</p>
+  </footer>
+</body>
+</html>
